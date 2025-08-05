@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  api:
+    build: ./backend
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/pcb
+    ports: ["8000:8000"]
+    depends_on: [mongo]
+  frontend:
+    build: ./frontend
+    ports: ["3000:80"]
+    depends_on: [api]
+  mongo:
+    image: mongo:7
+    volumes:
+      - mongo-data:/data/db
+      - ./mongo-init:/docker-entrypoint-initdb.d:ro
+
+volumes:
+  mongo-data:

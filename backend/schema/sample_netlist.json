@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "id":   "U1",
+      "name": "ATmega328",
+      "type": "IC",
+      "pins": [
+        { "id": "1", "name": "VCC" },
+        { "id": "2", "name": "GND" }
+      ]
+    },
+    {
+      "id":   "R1",
+      "name": "R1",
+      "type": "Resistor",
+      "pins": [
+        { "id": "1", "name": "A" },
+        { "id": "2", "name": "B" }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "id":   "N1",
+      "name": "VCC",
+      "connections": [{ "componentId": "U1", "pinId": "1" }]
+    },
+    {
+      "id":   "N2",
+      "name": "GND",
+      "connections": [{ "componentId": "U1", "pinId": "2" }]
+    },
+    {
+      "id":   "N3",
+      "name": "NET_R1",
+      "connections": [
+        { "componentId": "R1", "pinId": "1" },
+        { "componentId": "R1", "pinId": "2" }
+      ]
+    }
+  ]
+}

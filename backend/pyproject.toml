@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pcb-backend"
+version = "0.1.0"
+description = ""
+authors = ["Thiago <thiago.allue@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.116.1"
+uvicorn = {extras = ["standard"], version = "^0.35.0"}
+pydantic = "^2.11.7"
+fastjsonschema = "^2.21.1"
+motor = "^3.7.1"
+python-dateutil = "^2.9.0.post0"
+python-multipart = "^0.0.20"
+commentjson = "^0.9.0"
+pyjwt = {extras = ["crypto"], version = "^2.10.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

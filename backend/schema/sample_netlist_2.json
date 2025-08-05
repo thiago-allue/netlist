@@ -1,0 +1,106 @@
+{
+  "components": [
+    {
+      "id": "U1",
+      "name": "ATmega328P",
+      "type": "IC",
+      "pins": [
+        { "id": "1", "name": "VCC" },
+        { "id": "2", "name": "GND" },
+        { "id": "14", "name": "PB0" },
+        { "id": "15", "name": "PB1" },
+        { "id": "29", "name": "RESET" }
+      ]
+    },
+    {
+      "id": "C1",
+      "name": "100 nF Ceramic Cap",
+      "type": "Capacitor",
+      "pins": [
+        { "id": "1", "name": "VCC" },
+        { "id": "2", "name": "GND" }
+      ]
+    },
+    {
+      "id": "R1",
+      "name": "470 Ω LED Series",
+      "type": "Resistor",
+      "pins": [
+        { "id": "1", "name": "A" },
+        { "id": "2", "name": "B" }
+      ]
+    },
+    {
+      "id": "LED1",
+      "name": "Green LED",
+      "type": "LED",
+      "pins": [
+        { "id": "A", "name": "ANODE" },
+        { "id": "K", "name": "CATHODE" }
+      ]
+    },
+    {
+      "id": "J1",
+      "name": "3-pin Header",
+      "type": "Connector",
+      "pins": [
+        { "id": "1", "name": "VCC" },
+        { "id": "2", "name": "GND" },
+        { "id": "3", "name": "SIG" }
+      ]
+    }
+  ],
+  "nets": [
+    {
+      "id": "N1",
+      "name": "GND",
+      "connections": [
+        { "componentId": "U1", "pinId": "2" },
+        { "componentId": "C1", "pinId": "2" },
+        { "componentId": "LED1", "pinId": "K" },
+        { "componentId": "J1", "pinId": "2" }
+      ]
+    },
+    {
+      "id": "N2",
+      "name": "VCC",
+      "connections": [
+        { "componentId": "U1", "pinId": "1" },
+        { "componentId": "C1", "pinId": "1" },
+        { "componentId": "J1", "pinId": "1" }
+      ]
+    },
+    {
+      "id": "N3",
+      "name": "LED_DRV",
+      "connections": [
+        { "componentId": "U1", "pinId": "14" },
+        { "componentId": "R1", "pinId": "1" }
+      ]
+    },
+    {
+      "id": "N4",
+      "name": "LED_SERIES",
+      "connections": [
+        { "componentId": "R1", "pinId": "2" },
+        { "componentId": "LED1", "pinId": "A" }
+      ]
+    },
+    {
+      "id": "N5",
+      "name": "SIG",
+      "connections": [
+        { "componentId": "U1", "pinId": "15" },
+        { "componentId": "J1", "pinId": "3" }
+      ]
+    },
+    {
+      "id": "N6",
+      "name": "RESET",
+      "connections": [
+        { "componentId": "U1", "pinId": "29" },
+        { "componentId": "J1", "pinId": "3" }
+      ]
+    }
+  ]
+}
