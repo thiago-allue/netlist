@@ -1,6 +1,12 @@
 # PCB Netlist Visualizer + Validator
 
-This proof-of-concept application lets you upload, validate, visualize, and store PCB netlists in JSON format. It uses a **client-server architecture** with a **FastAPI** backend, **React** frontend with **Ant Design** and **React Flow**, and **MongoDB** for persistence. Everything runs locally via **Docker Compose**.
+This application lets you upload, validate, visualize, and store PCB netlists in JSON format. It uses a **client-server architecture** with a **FastAPI** backend, **React** frontend with **Ant Design** and **React Flow**, and **MongoDB** for persistence. Everything runs locally via **Docker Compose**.
+
+You can find the presentation of the full-working demo [here](https://www.loom.com/share/ba159ecb0a994f41a4d3428d7beb7332?sid=39a85101-e29b-419b-870c-e14ea6fb8faf).
+
+You can find the presentation of the code [here](https://www.loom.com/share/1513d6a19db34af2b91e5f1f43c1d687?sid=2373330b-9c48-4094-a3ba-195d564380be).
+
+Temporarily, the application on AWS can be found [here](http://18.118.83.204:3000/).
 
 ---
 
@@ -30,8 +36,9 @@ This proof-of-concept application lets you upload, validate, visualize, and stor
 1. **Clone the repo**
 
    ```bash
-   git clone thiago-allue/netlist_challenge
-   cd netlist_challenge
+   Github Repo: https://github.com/thiago-allue/netlist.git
+   clone the repository.
+   cd netlist
    ```
 2. **Start services**
 
